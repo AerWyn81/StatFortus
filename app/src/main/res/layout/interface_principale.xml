@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/sV"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context="pro.roquelaure.statfortus.InterfacePrincipale">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_statfortusTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_background">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="@string/app_name"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="24sp"
+                android:textStyle="bold"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_forceUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_statfortusTitle"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_background"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_forceAV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tv_ForceAV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_arrow_upward_black_24dp"
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:text="@string/parametrage_de_la_force_avant"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:targetApi="m"/>
+
+                <com.shawnlin.numberpicker.NumberPicker
+                    android:id="@+id/nP_forceAV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_ForceAV"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    app:np_dividerColor="@color/colorPrimaryDark"
+                    app:np_height="48dp"
+                    app:np_max="200"
+                    app:np_min="0"
+                    app:np_orientation="horizontal"
+                    app:np_textColor="@color/colorPrimary"
+                    app:np_textSize="24sp"
+                    app:np_value="50"
+                    app:np_width="140dp"
+                    app:np_wrapSelectorWheel="false"/>
+
+                <TextView
+                    android:id="@+id/tv_poidsForceAV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nP_forceAV"
+                    android:layout_marginStart="85dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/force_affectee"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_poidsForceAVValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_poidsForceAV"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/tv_poidsForceAV"
+                    android:text="@string/default_value_forceAV"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/separateur"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/rl_forceAV"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:background="@color/grey"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_forceAR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_below="@id/separateur"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/tv_ForceAR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="13dp"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_arrow_downward_black_24dp"
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:text="@string/parametrage_de_la_force_arri_re"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:targetApi="m"/>
+
+                <com.shawnlin.numberpicker.NumberPicker
+                    android:id="@+id/nP_forceAR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_ForceAR"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    app:np_dividerColor="@color/colorPrimaryDark"
+                    app:np_height="48dp"
+                    app:np_max="200"
+                    app:np_min="0"
+                    app:np_orientation="horizontal"
+                    app:np_textColor="@color/colorPrimary"
+                    app:np_textSize="24sp"
+                    app:np_value="50"
+                    app:np_width="140dp"
+                    app:np_wrapSelectorWheel="false"/>
+
+                <TextView
+                    android:id="@+id/tv_poidsForceAR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/nP_forceAR"
+                    android:layout_marginStart="85dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/force_affectee"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:id="@+id/tv_poidsForceARValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_poidsForceAR"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@+id/tv_poidsForceAR"
+                    android:text="@string/default_value_forceAR"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/separateur2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@+id/rl_forceAR"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:background="@color/grey"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_temps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/separateur2">
+
+                <TextView
+                    android:id="@+id/tv_tempsEffort"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_access_time_black_24dp"
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:text="@string/temps_effort"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:targetApi="m"/>
+
+                <TextView
+                    android:id="@+id/tv_tempsEffortValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tv_tempsEffort"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/tv_tempsEffort"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_tempsTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_tempsEffort"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:drawablePadding="5dp"
+                    android:drawableStart="@drawable/ic_access_time_black_24dp"
+                    android:drawableTint="@color/colorPrimaryDark"
+                    android:gravity="center"
+                    android:text="@string/temps_total"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:targetApi="m"/>
+
+                <TextView
+                    android:id="@+id/tv_tempsTotalValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tv_tempsTotal"
+                    android:layout_marginStart="5dp"
+                    android:layout_toEndOf="@id/tv_tempsTotal"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"/>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_reinit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_forceUser"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_background"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnReset"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_buttons"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/ic_restore_black_24dp"
+            android:drawableTint="@color/white"
+            android:gravity="center"
+            android:onClick="reinitTmpTotal"
+            android:padding="5dp"
+            android:text="@string/reinitialiser_temps_total"
+            android:textColor="@color/white"
+            tools:targetApi="m"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_erreur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_reinit"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_background"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_erreur"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_erreur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tv_erreur_info"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="5dp"
+                android:textSize="16sp"
+                android:textStyle="italic"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/modifier_parametres_de_liaison"
+            android:layout_below="@id/ll_erreur"
+            android:textColor="@color/darkGrey"
+            android:textStyle="italic"
+            android:textSize="17sp"
+            android:layout_marginStart="3dp"
+            android:drawableStart="@drawable/ic_build_black_24dp"
+            android:drawablePadding="5dp"
+            android:drawableTint="@color/darkGrey"
+            android:gravity="center"
+            android:clickable="true"
+            android:onClick="openSettings"
+            tools:targetApi="m"/>
+    </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
